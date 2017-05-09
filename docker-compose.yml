@@ -12,7 +12,7 @@ services:
   app:
     build: ./nodejs
     volumes:
-      - ./web/src/public:/var/www/public
+      - ./app:/usr/src/app
     networks:
       - backend
 
