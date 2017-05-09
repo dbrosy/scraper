@@ -4,15 +4,24 @@ services:
   nginx:
     build: ./nginx
     links:
-      - app
+      - nodejs
     ports:
       - 8000:80
     networks:
       - backend
   app:
     build: ./nodejs
+    volumes:
+      - ./app:/src/app
+    depends_on: 
+      - nginx
     networks:
       - backend
 
 networks:
   backend:
+    driver: bridge
+
+volumes:
+  app_data:
+    driver: local
