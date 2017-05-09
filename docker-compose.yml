@@ -13,8 +13,6 @@ services:
     build: ./nodejs
     volumes:
       - ./app:/src/app
-    depends_on: 
-      - nginx
     networks:
       - backend
 
