@@ -1,19 +1,19 @@
 version: '2'
 
 services:
- web:
-   build: ./nginx
-   links:
-    - app
-   ports:
-    - 8000:80
-   networks:
-    - backend
+  web:
+    build: ./nginx
+    links:
+      - app
+    ports:
+      - 8000:80
+    networks:
+      - backend
 
- app:
-   build: ./nodejs
-   networks:
-    - backend
+  app:
+    build: ./nodejs
+    networks:
+      - backend
 
 networks:
   backend:
