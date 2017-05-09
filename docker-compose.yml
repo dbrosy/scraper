@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+ web:
+   build: ./nginx
+   links:
+    - app
+   ports:
+    - 8000:80
+
+ app:
+   build: ./nodejs
