@@ -10,7 +10,7 @@ services:
     networks:
       - backend
   app:
-    build: ./nodejs
+    build: ./node_web_app
     volumes:
       - app_data:/usr/src/app
     networks:
