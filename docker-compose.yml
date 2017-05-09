@@ -4,7 +4,7 @@ services:
   nginx:
     build: ./nginx
     links:
-      - nodejs
+      - app
     ports:
       - 8000:80
     networks:
