@@ -7,9 +7,14 @@ services:
     - app
    ports:
     - 8000:80
+   network:
+    - backend
 
  app:
    build: ./nodejs
+ 
+   network:
+    - backend
    
  networks:
   backend:
